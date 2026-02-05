@@ -10,8 +10,12 @@ typedef struct {
 } Game;
 
 void InitWin(Game *this, int screenWidth, int screenHeight, int targetFps);
+
 void run();
+
 void update(float dt);
+
 void draw();
+
 
 #endif

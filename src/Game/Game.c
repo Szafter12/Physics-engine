@@ -20,12 +20,13 @@ void run() {
     }
 }
 
-void update(float dt) {}
+void update(float dt) {
+}
 
 void draw() {
     BeginDrawing();
 
-    ClearBackground(RAYWHITE);
+    ClearBackground(BLACK);
 
     EndDrawing();
 }
