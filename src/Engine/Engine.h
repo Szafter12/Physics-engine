@@ -7,9 +7,9 @@ typedef struct {
     int screenWidth;
     int screenHeight;
     int targetFps;
-} Game;
+} Engine;
 
-void InitWin(Game *this, int screenWidth, int screenHeight, int targetFps);
+void InitWin(Engine *this, int screenWidth, int screenHeight, int targetFps);
 
 void run();
 

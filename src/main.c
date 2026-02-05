@@ -1,9 +1,9 @@
-#include "Game/Game.h"
+#include "Engine/Engine.h"
 
 int main(void) {
-    Game game;
+    Engine engine;
 
-    InitWin(&game, 800, 600, 60);
+    InitWin(&engine, 800, 600, 60);
     run();
 
     CloseWindow();

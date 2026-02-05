@@ -1,6 +1,6 @@
-#include "Game.h"
+#include "Engine.h"
 
-void InitWin(Game *this, const int screenWidth, const int screenHeight, const int targetFps) {
+void InitWin(Engine *this, const int screenWidth, const int screenHeight, const int targetFps) {
     this->screenHeight = screenHeight;
     this->screenWidth = screenWidth;
     this->targetFps = targetFps;
