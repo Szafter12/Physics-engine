@@ -5,28 +5,28 @@ void InitWin(Engine *this, const int screenWidth, const int screenHeight, const 
     this->screenWidth = screenWidth;
     this->targetFps = targetFps;
 
+    World_Init(&this->world, this->screenWidth, this->screenHeight);
     InitWindow(this->screenWidth, this->screenHeight, "raylib");
     SetTargetFPS(this->targetFps);
 }
 
-void run() {
+void run(Engine *this) {
     // Main game loop
     while (!WindowShouldClose()) {
         const float dt = GetFrameTime();
-        // Update
-        update(dt);
-        // Draw
-        draw();
+        update(this, dt);
+        draw(this);
     }
 }
 
-void update(float dt) {
+void update(Engine *this, float dt) {
+    if (this->world.isPaused) return;
 }
 
-void draw() {
+void draw(Engine *this) {
     BeginDrawing();
-
     ClearBackground(BLACK);
-
+    World_Draw(&this->world);
+    DrawFPS(10, 10);
     EndDrawing();
 }

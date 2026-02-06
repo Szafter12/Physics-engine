@@ -4,7 +4,7 @@ int main(void) {
     Engine engine;
 
     InitWin(&engine, 800, 600, 60);
-    run();
+    run(&engine);
 
     CloseWindow();
     return 0;
