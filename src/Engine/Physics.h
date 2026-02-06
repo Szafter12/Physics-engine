@@ -3,10 +3,6 @@
 
 #include "raylib.h"
 
-typedef enum {
-    CIRCLE, RECTANGLE
-} BodyShape;
-
 typedef struct {
     // 1. Kinematics
     Vector2 position;
@@ -14,16 +10,16 @@ typedef struct {
     Vector2 acceleration;
     // 2. Physic properties
     float mass;
-    float inverseMass;
     float elasticity;
     float friction;
     // Shape
-    BodyShape shape;
     float radius;
     // 4. State & Debug
     Color color;
     bool isStatic;
     bool isSelected;
 } PhysicsBody;
+
+void Physics_ApplyGravity(PhysicsBody *b, float gravity, const float finalDt);
 
 #endif //ENGINE_PHYSICS_H

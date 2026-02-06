@@ -5,9 +5,9 @@ void InitWin(Engine *this, const int screenWidth, const int screenHeight, const 
     this->screenWidth = screenWidth;
     this->targetFps = targetFps;
 
-    World_Init(&this->world, this->screenWidth, this->screenHeight);
     InitWindow(this->screenWidth, this->screenHeight, "raylib");
     SetTargetFPS(this->targetFps);
+    World_Init(&this->world, this->screenWidth, this->screenHeight);
 }
 
 void run(Engine *this) {
@@ -19,8 +19,9 @@ void run(Engine *this) {
     }
 }
 
-void update(Engine *this, float dt) {
+void update(Engine *this, const float dt) {
     if (this->world.isPaused) return;
+    World_Update(&this->world, dt);
 }
 
 void draw(Engine *this) {

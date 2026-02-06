@@ -25,9 +25,9 @@ void World_Update(World *this, float dt);
 
 void World_Draw(World *this);
 
-void World_SetGravity(World *this, const float finalDt, PhysicsBody *b);
-
 void World_SetCollision(World *this, PhysicsBody *b);
+
+void World_AddBody(World *this);
 
 
 #endif //ENGINE_WORLD_H
