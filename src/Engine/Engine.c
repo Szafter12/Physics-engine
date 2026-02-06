@@ -4,6 +4,7 @@ void InitWin(Engine *this, const int screenWidth, const int screenHeight, const 
     this->screenHeight = screenHeight;
     this->screenWidth = screenWidth;
     this->targetFps = targetFps;
+    SetConfigFlags(FLAG_MSAA_4X_HINT);
 
     InitWindow(this->screenWidth, this->screenHeight, "raylib");
     SetTargetFPS(this->targetFps);

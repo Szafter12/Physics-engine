@@ -40,7 +40,7 @@ void World_AddBody(World *this) {
     b->position = (Vector2){GetScreenWidth() / 2.f, GetScreenHeight() / 2.f};
     b->velocity = (Vector2){15.0f, 0.0f};
     b->acceleration = (Vector2){0.0f, 0.0f};
-    b->elasticity = 0.5f;
+    b->elasticity = 1.0f;
     b->isStatic = false;
     b->mass = 10.0f;
     b->radius = 20.0f;
